@@ -25,7 +25,7 @@ async def start_command(client, message):
 async def handle_callback(client, callback_query):
     data = callback_query.data
     chat_id = callback_query.message.chat.id
-    message_id = callback_query.message.message_id
+    message_id = callback_query.message.id
 
     if data == "help":
         await client.edit_message_text(
