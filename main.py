@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 # Replace 'YOUR_API_ID' and 'YOUR_API_HASH' with your Telegram API credentials
-api_id = 10471716'
+api_id = '10471716'
 api_hash = 'f8a1b21a13af154596e2ff5bed164860'
 bot_token = '6365859811:AAGK5hlLKtLf-RqlaEXngZTWnfSPISerWPI'
 
