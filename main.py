@@ -1,15 +1,15 @@
 from bs4 import BeautifulSoup
 import requests
 
-# Replace 'url' with the URL of the webpage containing the videos
-url = 'https://file-to-link-bot-botiodevs-918c1f28643d.herokuapp.com/watch/662d17e370f796e2061f681f'
+# Replace 'url' with the URL of the webpage containing the video
+url = 'https://www.pexels.com/video/times-in-the-desrt-20770858/'
 response = requests.get(url)
 soup = BeautifulSoup(response.text, 'html.parser')
 
-# Find all video tags
-video_tags = soup.find_all('video')
+# Find the iframe tag
+iframe_tag = soup.find('iframe')
 
-# Extract URLs
-video_urls = [video['src'] for video in video_tags]
+# Extract the src attribute, which contains the video URL
+video_url = iframe_tag['src']
 
-print(video_urls)
+print(video_url)
